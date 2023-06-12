@@ -45,6 +45,10 @@ body {
     justify-content: space-between;
 }
 
+#forecastheader {
+    background-color: gainsboro;
+}
+
 #forecast-container {
     display: flex;
     flex-direction: row;
