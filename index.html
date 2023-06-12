@@ -5,48 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/styles.css" />
-  <title>Git it Done</title>
+  <title>Weather Dashboard</title>
 </head>
 
 <body class="flex-column min-100-vh">
-  <header class="hero">
-    <h1 class="app-title">
-      <i class="fab fa-github"></i> Git it Done!
-    </h1>
-    <p>Search for a GitHub user or click on a language to see a list of repositories and how many open issues they have!
-    </p>
+  <header id="header">
+    <h1 id="title" class="col-12">Weather Dashboard</h1>
+    <p id="sub">A tool for seeing the weather forecast in your city of choice.</p>
   </header>
 
 
-  <main class="flex-row justify-space-between">
-    <div class="col-12 col-md-4">
+  <main id="main" class="flex-row justify-space-between">
 
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By User</h3>
-        <form id="user-form" class="card-body">
-          <label class="form-label" for="username">Username</label>
-          <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn">Get User</button>
+    <div id="entry-container" class="col-12 col-md-4">
+      <div id="search-form" class="card">
+        <h3 class="card-header">Search By City</h3>
+        <form id="city-form" class="card-body">
+          <label class="form-label" for="city-name">City Name</label>
+          <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+          <button type="submit" class="btn">Search City</button>
         </form>
       </div>
 
-      <div class="card">
-        <h3 class="card-header text-uppercase">Search By Topic</h3>
-        <div id="language-buttons" class="card-body">
-          <button data-language="javascript" class="btn">JavaScript</button>
-          <button data-language="html" class="btn">HTML</button>
-          <button data-language="css" class="btn">CSS</button>
+      <div id="history" class="card">
+        <h3 class="card-header text-uppercase">Search History</h3>
+        <div id="history-buttons" class="card-body">
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-8">
-      <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
-      <div id="repos-container" class="list-group"></div>
-    </div>
+    <section id="weather-container" class="col-8">
+      <div id="current-weather">
+        <h2>Today's Weather</h2>
+      </div>
+
+      <div id="forecast" class="col-12 col-md-8">
+        <h2 id='forecastheader' class="hide">5 Day Weather Forecast<span id="city-search-term"></span></h2>
+        <div id="forecast-container" class=""></div>
+      </div>
+    </section>
   </main>
 
   <script src="./assets/js/script.js"></script>
