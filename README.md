@@ -12,6 +12,8 @@ To install this project, just pull the code down from the repository.
 
 This is an easy application to use. Just type the city's weather forecast that you would like to see into the search bar, then click the search button. The 5 day weather forecast will then be displayed.
 
+Here is a link to the deployment page: https://benwhann.github.io/Weather-Dashboard/
+
 ![alt text](assets/images/SS1.png)
 ![alt text](assets/images/SS2.png)
 ![alt text](assets/images/SS3.png)
